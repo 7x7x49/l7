@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 abstract class Transport
 {
     public abstract string marka { get; set; }
@@ -35,62 +35,57 @@ abstract class Ship : Transport
 
 class Mustang : Auto
 {
-    public Mustang(double speed, double weight, double distance)
+    public Mustang(string marka,  double speed, double weight, double distance)
     {
+        this.marka = marka;
         this.speed = speed;
         this.weight = weight;
         this.distance = distance;
-        marka = "Mustang";
     }
-    
-    
+
     public override void GetTransportInfo()
     {
-        Console.WriteLine($"{marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
+        Console.WriteLine($"Mustang {marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
     }
 }
 
 class Оstrich : Airplane
 {
-    public Оstrich(double speed, double weight, double distance)
+    public Оstrich(string marka, double speed, double weight, double distance)
     {
+        this.marka = marka;
         this.speed = speed;
         this.weight = weight;
         this.distance = distance;
-        marka = "Оstrich";
-    }
-    
-    
-        public override void GetTransportInfo()
-    {
-        Console.WriteLine($"{marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
     }
 
+    public override void GetTransportInfo()
+    {
+        Console.WriteLine($"Оstrich {marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
+    }
 }
 class Tuna : Ship
 {
-    public Tuna(double speed, double weight, double distance)
+    public Tuna(string marka, double speed, double weight, double distance)
     {
+        this.marka = marka;
         this.speed = speed;
         this.weight = weight;
         this.distance = distance;
-        marka = "Tuna";
-    }
-    
-    
-        public override void GetTransportInfo()
-    {
-        Console.WriteLine($"{marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
     }
 
+    public override void GetTransportInfo()
+    {
+        Console.WriteLine($"Tuna {marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
+    }
 }
 class Program
 {
     static void Main()
     {
-        Mustang Lorenzo = new Mustang(12345, 3453, 3451);
-        Оstrich Alazan = new Оstrich(423, 24, 5232423432);
-        Tuna Mariposa = new Tuna(23, 564564, 4564262456);
+        Mustang Lorenzo = new Mustang("Lorenzo", 12345, 3453, 3451);
+        Оstrich Alazan = new Оstrich("Alazan", 423, 24, 5232423432);
+        Tuna Mariposa = new Tuna("Mariposa", 23, 564564, 849322);
 
         Lorenzo.GetTransportInfo();
         Alazan.GetTransportInfo();
