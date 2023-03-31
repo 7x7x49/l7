@@ -35,11 +35,6 @@ abstract class Ship : Transport
 
 class Mustang : Auto
 {
-    public override void GetTransportInfo()
-    {
-        Console.WriteLine($"{marka}\n Грузоподъемность: {weight} кг\n Расстояние:{distance} км\n");
-    }
-
     public Mustang(double speed, double weight, double distance)
     {
         this.speed = speed;
@@ -47,15 +42,16 @@ class Mustang : Auto
         this.distance = distance;
         marka = "Mustang";
     }
-}
-
-class Оstrich : Airplane
-{
+    
+    
     public override void GetTransportInfo()
     {
         Console.WriteLine($"{marka}\n Грузоподъемность: {weight} кг\n Расстояние:{distance} км\n");
     }
+}
 
+class Оstrich : Airplane
+{
     public Оstrich(double speed, double weight, double distance)
     {
         this.speed = speed;
@@ -63,14 +59,16 @@ class Оstrich : Airplane
         this.distance = distance;
         marka = "Оstrich";
     }
-}
-class Tuna : Ship
-{
-    public override void GetTransportInfo()
+    
+    
+        public override void GetTransportInfo()
     {
         Console.WriteLine($"{marka}\n Грузоподъемность: {weight} кг\n Расстояние:{distance} км\n");
     }
 
+}
+class Tuna : Ship
+{
     public Tuna(double speed, double weight, double distance)
     {
         this.speed = speed;
@@ -78,6 +76,13 @@ class Tuna : Ship
         this.distance = distance;
         marka = "Tuna";
     }
+    
+    
+        public override void GetTransportInfo()
+    {
+        Console.WriteLine($"{marka}\n Грузоподъемность: {weight} кг\n Расстояние:{distance} км\n");
+    }
+
 }
 class Program
 {
