@@ -45,7 +45,7 @@ class Mustang : Auto
 
     public override void GetTransportInfo()
     {
-        Console.WriteLine($"Mustang {marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
+        Console.WriteLine($"Mustang {marka}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
     }
 }
 
@@ -61,7 +61,7 @@ class Оstrich : Airplane
 
     public override void GetTransportInfo()
     {
-        Console.WriteLine($"Оstrich {marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
+        Console.WriteLine($"Оstrich {marka}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
     }
 }
 class Tuna : Ship
@@ -76,7 +76,7 @@ class Tuna : Ship
 
     public override void GetTransportInfo()
     {
-        Console.WriteLine($"Tuna {marka}\n     Скорость: {speed}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
+        Console.WriteLine($"Tuna {marka}\n     Грузоподъемность: {weight} кг\n     Расстояние:{distance} км\n");
     }
 }
 class Program
